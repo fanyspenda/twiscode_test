@@ -8,11 +8,11 @@ export interface HeaderProps {}
 const Header: React.FunctionComponent = () => {
 	const [language, setLanguage] = useState("English");
 	return (
-		<div>
-			<div className="flex flex-col items-center">
+		<div className="border-b-2 border-t-4 border-yellow-200">
+			<div className="flex flex-col items-center my-4">
 				<img src={twiscodeLogo} className="w-52" alt="" />
 			</div>
-			<div className="flex flex-row justify-start items-center">
+			<div className="flex flex-row justify-start items-baseline mx-2">
 				<Dropdown
 					overlay={
 						<Menu>
@@ -36,7 +36,7 @@ const Header: React.FunctionComponent = () => {
 						Language: {language} <DownOutlined />
 					</p>
 				</Dropdown>
-				<SettingFilled />
+				<SettingFilled className="mx-2" />
 			</div>
 		</div>
 	);
